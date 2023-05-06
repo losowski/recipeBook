@@ -1,18 +1,14 @@
 % Recipe Design
-\ProvidesPackage{recipe}
+\ProvidesPackage{cookbookrecipe}
 
 %Page setup
 % Set to A4 Paper size
 \usepackage{geometry}
 % Default with bigger Top and Right margins
-\geometry{a4paper, portrait, includeheadfoot, margin=2cm, top=1cm, right=3cm}
-
-% Specify what packages to import
-\usepackage{fancyhdr}
-\setlength{\parindent}{2cm}
+\geometry{a5paper, portrait, margin=2cm, top=1cm, right=3cm}
 
 % Header Variable
-\newif\ifrecipevar
+\newif\ifcookbookrecipevar
 
 % RecipeName
 \newcommand {\recipeName}[1] {
