@@ -1,0 +1,71 @@
+% Recipe Design
+\ProvidesPackage{poetry}
+
+%Page setup
+% Set to A4 Paper size
+\usepackage{geometry}
+% Default with bigger Top and Right margins
+\geometry{a4paper, portrait, includeheadfoot, margin=2cm, top=1cm, right=3cm}
+
+% Specify what packages to import
+\usepackage{fancyhdr}
+\setlength{\parindent}{2cm}
+
+% Header Variable
+\newif\ifpoetryvar
+
+% RecipeName
+\newcommand {\recipeName}[1] {
+	#1
+}
+% Serves Count
+\newcommand {\serveCount}[1] {
+	Serves: #1
+}
+
+% Description
+\newcommand {\recipeDesciption}[1] {
+	#1
+}
+
+% IngredientTitle
+\newcommand {\IngredientTitle}[0] {
+	Ingredients
+}
+
+% Ingredient
+\newcommand {}[1] {
+	#1
+}
+
+% IngredientAmount
+\newcommand {}[1] {
+	#1
+}
+
+% IngredientPreparation
+\newcommand {}[1] {
+	#1
+}
+
+% 
+% PreparationTitle
+\newcommand {}[1] {
+	PREPARATION #1
+}
+
+% Preparation (1 - Subject, 2 - Action)
+\newcommand {}[1] {
+	#1
+}
+
+% 
+% CookingStep
+\newcommand {}[1] {
+	#1
+}
+
+% CookingCondition ("Continue Unitl")
+\newcommand {}[1] {
+	\textbf{CONTINUE UNTIL} #1
+}
