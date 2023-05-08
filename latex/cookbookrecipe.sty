@@ -7,8 +7,9 @@
 % Set to A4 Paper size
 \usepackage{geometry}
 % Default with bigger Top and Right margins
-\geometry{a5paper, portrait, margin=2cm, top=1cm, right=3cm}
+\geometry{a4paper, portrait, margin=2cm, top=1cm, right=3cm}
 
+\setlength{\parindent}{2cm}
 % Header Variable
 \newif\ifcookbookrecipevar
 
@@ -32,38 +33,38 @@
 }
 
 % Ingredient
-\newcommand {}[1] {
+\newcommand {\Ingredient}[1] {
 	#1
 }
 
 % IngredientAmount
-\newcommand {}[1] {
+\newcommand {\IngredientAmount}[1] {
 	#1
 }
 
 % IngredientPreparation
-\newcommand {}[1] {
+\newcommand {\IngredientPreparation}[1] {
 	#1
 }
 
 % 
 % PreparationTitle
-\newcommand {}[1] {
+\newcommand {\PreparationTitle}[1] {
 	PREPARATION #1
 }
 
 % Preparation (1 - Subject, 2 - Action)
-\newcommand {}[1] {
-	#1
+\newcommand {\PreparationStep}[2] {
+	#1 - #2
 }
 
 % 
 % CookingStep
-\newcommand {}[1] {
+\newcommand {\CookingStep}[1] {
 	#1
 }
 
 % CookingCondition ("Continue Unitl")
-\newcommand {}[1] {
-	\textbf{CONTINUE UNTIL} #1
+\newcommand {\CookingCondition}[1] {
+	\textbf{CONTINUE UNTIL:} #1
 }
