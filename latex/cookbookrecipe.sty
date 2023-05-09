@@ -14,6 +14,9 @@
 % cookbookrecipe variable
 \newif\ifcookbookrecipevar
 
+% environment check
+% https://tex.stackexchange.com/questions/39738/command-behavior-depending-on-current-environment
+
 % RecipeName
 \newcommand {\recipeName}[1] {
 	\setlength{\headheight}{24pt}
@@ -50,7 +53,8 @@
 
 % IngredientPreparation
 \newcommand {\IngredientPreparation}[2] {
-	\Ingredient{#1}: #2
+	\Ingredient{#1} : #2
+	\newline
 }
 
 % 
@@ -58,27 +62,28 @@
 \newcommand {\PreparationTitle}[1] {
 	\textbf{\large{PREPARATION:} #1}
 	\newline
-
 }
 
-% Preparation (1 - Subject, 2 - Action)
-\newcommand {\PreparationStep}[2] {
-	\emph{#1} - #2
+% Preparation (1 - Action)
+\newcommand {\PreparationStep}[1] {
+	% Check if we are already enumerated
+	%	IF YES - then end the enumeration
+	%	Else do nothing
+	\emph{ -- #1 --}
 	\newline
-	%\ifpreparationList
-	%\else
-	%	\newif\ifpreparationList
-	%\fi
+	% Start enumeration
+	%\begin{enumerate}
 }
 
 % 
 % CookingStep
 \newcommand {\CookingStep}[2] {
-	\emph{#1} - #2
+	\emph{#1} - #2 \hfill
 	\newline
 }
 
 % CookingCondition ("Continue Unitl")
 \newcommand {\CookingCondition}[1] {
 	\textbf{CONTINUE UNTIL:} #1
+	\newline
 }
