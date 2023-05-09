@@ -9,6 +9,7 @@
 % Default with bigger Top and Right margins
 \geometry{a5paper, portrait, margin=2cm, top=1cm, right=3cm}
 
+
 \setlength{\parindent}{1cm}
 % cookbookrecipe variable
 \newif\ifcookbookrecipevar
@@ -49,24 +50,32 @@
 
 % IngredientPreparation
 \newcommand {\IngredientPreparation}[2] {
-	\item \Ingredient{#1}: #2
+	\Ingredient{#1}: #2
 }
 
 % 
 % PreparationTitle
 \newcommand {\PreparationTitle}[1] {
-	PREPARATION #1
+	\textbf{\large{PREPARATION:} #1}
+	\newline
+
 }
 
 % Preparation (1 - Subject, 2 - Action)
 \newcommand {\PreparationStep}[2] {
-	#1 - #2
+	\emph{#1} - #2
+	\newline
+	%\ifpreparationList
+	%\else
+	%	\newif\ifpreparationList
+	%\fi
 }
 
 % 
 % CookingStep
-\newcommand {\CookingStep}[1] {
-	#1
+\newcommand {\CookingStep}[2] {
+	\emph{#1} - #2
+	\newline
 }
 
 % CookingCondition ("Continue Unitl")
