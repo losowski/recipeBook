@@ -62,21 +62,21 @@
 % -- Cooking.tex --
 % PreparationTitle
 \newcommand {\PreparationTitle}[1] {
-	\item \textbf{\large{PREPARATION:} #1}
+	% Check if we are already enumerated
+	%	IF YES - then end the enumeration
+	%	Else do nothing
+	\item \textbf{PREPARATION:} #1
+	% Start enumeration
 }
 
 % IngredientPreparation
 \newcommand {\IngredientPreparation}[2] {
-	\item \flushleft{\Ingredient{#1} : #2}
+	\item {\Ingredient{#1} : #2}
 }
 
 % Preparation (1 - Action)
 \newcommand {\PreparationStep}[1] {
-	% Check if we are already enumerated
-	%	IF YES - then end the enumeration
-	%	Else do nothing
-	\item \center{\emph{ -- #1 --}}
-	% Start enumeration
+	\item {\emph{ -- #1 --}}
 }
 
 % OvenTemp
@@ -87,7 +87,7 @@
 % 
 % CookingStep
 \newcommand {\CookingStep}[1] {
-	\item \center{\textbf{** #1 **}}
+	\item {\textbf{** #1 **}}
 }
 
 % CookingCondition ("Continue Unitl")
