@@ -88,7 +88,6 @@
 	#1 $^{\circ}$C
 }
 
-% 
 % CookingStep
 \newcommand {\CookingStep}[1] {
 	\item {\textbf{** #1 **}}
@@ -97,4 +96,10 @@
 % CookingCondition ("Continue Unitl")
 \newcommand {\CookingCondition}[1] {
 	\item \textbf{CONTINUE UNTIL:} #1
+}
+
+%End cooking method by cleaning up the page
+\newcommand {\EndCookingMethod}[0] {
+	\end{enumerate}
+	\clearpage
 }
