@@ -17,6 +17,7 @@
 % environment check
 % https://tex.stackexchange.com/questions/39738/command-behavior-depending-on-current-environment
 
+%  -- Ingredient.tex --
 % RecipeName
 \newcommand {\recipeName}[1] {
 	\setlength{\headheight}{24pt}
@@ -57,17 +58,16 @@
 	\item \Ingredient{#1} - #2
 }
 
-% IngredientPreparation
-\newcommand {\IngredientPreparation}[2] {
-	\flushleft{\Ingredient{#1} : #2}
-	\newline
-}
 
-% 
+% -- Cooking.tex --
 % PreparationTitle
 \newcommand {\PreparationTitle}[1] {
-	\textbf{\large{PREPARATION:} #1}
-	\newline
+	\item \textbf{\large{PREPARATION:} #1}
+}
+
+% IngredientPreparation
+\newcommand {\IngredientPreparation}[2] {
+	\item \flushleft{\Ingredient{#1} : #2}
 }
 
 % Preparation (1 - Action)
@@ -75,26 +75,22 @@
 	% Check if we are already enumerated
 	%	IF YES - then end the enumeration
 	%	Else do nothing
-	\center{\emph{ -- #1 --}}
-	\newline
+	\item \center{\emph{ -- #1 --}}
 	% Start enumeration
-	%\begin{enumerate}
 }
 
 % OvenTemp
-\newcommand{ \ovenTemp}[1]{
+\newcommand {\ovenTemp}[1] {
 	#1 $^{\circ}$C
 }
 
 % 
 % CookingStep
 \newcommand {\CookingStep}[1] {
-	\center{\textbf{** #1 **}}
-	\newline
+	\item \center{\textbf{** #1 **}}
 }
 
 % CookingCondition ("Continue Unitl")
 \newcommand {\CookingCondition}[1] {
-	\textbf{CONTINUE UNTIL:} #1
-	\newline
+	\item \textbf{CONTINUE UNTIL:} #1
 }
