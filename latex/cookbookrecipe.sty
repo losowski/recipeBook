@@ -20,6 +20,7 @@
 %  -- Ingredient.tex --
 % RecipeName
 \newcommand {\recipeName}[1] {
+	\clearpage
 	\setlength{\headheight}{24pt}
 	\raggedleft{\fontfamily{qhv}\selectfont \Large{\underline{#1}} }
 	\newline
@@ -102,5 +103,4 @@
 \newcommand {\EndCookingMethod}[0] {
 	\CookingStep{Serve!}
 	\end{enumerate}
-	\clearpage
 }
