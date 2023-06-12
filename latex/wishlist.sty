@@ -1,0 +1,15 @@
+% RecipeWishList Design
+\ProvidesPackage{wishlist}
+
+
+\newcommand {\WishListTitle}[0] {
+	\clearpage
+	\raggedleft{\fontfamily{qhv}\selectfont \Large{\underline{Cooking Wishlist}} }
+	\newline
+}
+
+% WishList Items
+\newcommand {\WishListItem}[2] {
+	\raggedright{\textbf{#1} - {#2}}
+	\newline
+}

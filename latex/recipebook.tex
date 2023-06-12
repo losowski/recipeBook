@@ -3,13 +3,26 @@
 
 %Use the header style sheet
 \usepackage{cookbookrecipe}
+\usepackage{preface}
+\usepackage{rulebook}
+\usepackage{wishlist}
 
 % Start the document
 \begin{document}
 
 % Import preface
-%\input{preface/preface}
+\PrefaceTitle
+\input{preface/preface}
 
+% Import rulebook
+\RuleBookTitle
+\input{rulebook/rulebook}
+
+% Import wishlist
+\WishListTitle
+\input{wishlist/wishlist}
+
+\MainsTitle
 %Import ChickenChorizoKale
 \input{ChickenChorizoKale/cooking.tex}
 %Import PorkGoulash
@@ -22,6 +35,12 @@
 \input{PolishSausageBake/cooking.tex}
 %Import TagineChicken
 \input{TagineChicken/cooking.tex}
+
+\DrinksTitle
+%Import Cardamom Tea
+\input{CardamomTea/cooking.tex}
+
+\DessertsTitle
 
 % End the document
 \end{document}
