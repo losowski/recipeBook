@@ -1,0 +1,15 @@
+% RecipeHitList Design
+\ProvidesPackage{hitlist}
+
+
+\newcommand {\HitListTitle}[0] {
+	\clearpage
+	\raggedleft{\fontfamily{qhv}\selectfont \Large{\underline{Cooking Hitlist}} }
+	\newline
+}
+
+% HitList Items
+\newcommand {\HitListItem}[1] {
+	\raggedright{\textbf{#1}}
+	\newline
+}
