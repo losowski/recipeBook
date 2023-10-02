@@ -15,3 +15,8 @@ Recipe Book
 
 # Package dependencies
 NONE
+
+# HOWTO
+cd latex
+pdflatex recipebook.tex
+pdflatex shoppinglist.tex
