@@ -1,0 +1,83 @@
+% Ingredients list
+\ProvidesPackage{ingredient_list}
+
+%  -- Ingredient.tex --
+% RecipeName
+\newcommand {\recipeName}[1] {
+	\def\vRecipeName{#1}
+}
+% Serves Count
+\newcommand {\serveCount}[2] {
+	\def\vServeCount{#1}
+	\def\vTaste{#2}
+}
+
+% CookTime
+\newcommand {\cookTime}[2] {
+	\def\vPreparationTime{#1}
+	\def\vCookingMinutes{#2}
+}
+
+% Description
+\newcommand {\recipeDesciption}[1] {
+	\def\vRecipeDesciption{#1}
+}
+
+% Description
+\newcommand {\recipeNote}[1] {
+	\def\vRecipeNote{#1}
+}
+
+
+% IngredientTitle
+\newcommand {\IngredientTitle}[0] {
+	\raggedright{\underline{\large{Ingredients}}}
+	\newline
+}
+
+% Ingredient
+\newcommand {\Ingredient}[1] {
+	\textbf{#1}
+}
+
+% IngredientAmount
+\newcommand {\IngredientAmount}[2] {
+	\item \Ingredient{#1} - #2
+}
+
+
+% Definition of the environment
+\newenvironment{ingredient_list}
+{
+% RecipeName
+\clearpage
+\setlength{\headheight}{24pt}
+\raggedleft{\fontfamily{qhv}\selectfont \Large{\underline{\vRecipeName}} }
+\newline
+% Serves Count
+\textbf{Serves:} \vServeCount \hspace{1cm} \textbf{Taste: \vTaste/10}
+\newline
+% CookTime
+\textbf{Preparation:} \vPreparationTime minutes \hspace{1cm} \textbf{Cooking:} \vCookingMinutes minutes
+\newline
+\newline
+% Description
+\vRecipeDesciption
+\newline
+\newline
+% Recipe Note
+\ifdefined\vRecipeNote
+	\vRecipeNote
+	\newline
+	\newline
+\fi
+% Ingredients title
+\IngredientTitle
+\begin{enumerate}
+}
+%Actual entries
+{
+\end{enumerate}
+}
+
+\endinput

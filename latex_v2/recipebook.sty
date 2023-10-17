@@ -1,0 +1,22 @@
+% Preface Design
+\ProvidesPackage{recipebook}
+
+%Page setup
+% Set to A4 Paper size
+\usepackage{geometry}
+% Default with bigger Top and Right margins
+\geometry{a5paper, portrait, margin=2cm, top=1cm, right=3cm}
+
+\setlength{\parindent}{1cm}
+
+%% Functions
+% Sections
+\newcommand {\RecipeSection}[1] {
+	\clearpage
+	\raggedleft{\fontfamily{qhv}\selectfont \Large{\underline{#1}} }
+	\newline
+}
+
+
+
+\endinput

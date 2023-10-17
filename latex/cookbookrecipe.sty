@@ -22,6 +22,11 @@
 	\fontfamily{qhv}\selectfont \Large{\textbf{Mains}}
 }
 
+\newcommand{\Omlegeddon}[0] {
+	\clearpage
+	\fontfamily{qhv}\selectfont \Large{\textbf{Omlegeddon}}
+}
+
 \newcommand{\DrinksTitle}[0] {
 	\clearpage
 	\fontfamily{qhv}\selectfont \Large{\textbf{Drinks}}
@@ -54,6 +59,12 @@
 
 % Description
 \newcommand {\recipeDesciption}[1] {
+	#1
+	\newline
+}
+
+% Description
+\newcommand {\recipeNote}[1] {
 	#1
 	\newline
 }
@@ -99,11 +110,6 @@
 	\item {\emph{ -- #1 --}}
 }
 
-% OvenTemp
-\newcommand {\ovenTemp}[1] {
-	#1 $^{\circ}$C
-}
-
 % CookingStep
 \newcommand {\CookingStep}[1] {
 	\item {\textbf{** #1 **}}
@@ -119,3 +125,5 @@
 	\CookingStep{Serve!}
 	\end{enumerate}
 }
+
+\endinput

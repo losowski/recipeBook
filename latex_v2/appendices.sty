@@ -1,0 +1,22 @@
+% Ingredients list
+\ProvidesPackage{appendices}
+
+%% Notes
+\newcommand {\note}[1] {
+	\item #1
+}
+
+
+% Definition of the environment
+\newenvironment{appendices}
+{
+\setlength{\headheight}{24pt}
+\raggedright{\fontfamily{qhv}\selectfont {\underline{Appendix:}} }
+\begin{enumerate}
+}
+%Actual entries
+{
+\end{enumerate}
+}
+
+\endinput

@@ -1,0 +1,21 @@
+% RecipeWishList Design
+\ProvidesPackage{wishlist}
+
+% WishList Items
+\newcommand {\WishListItem}[2] {
+	\item \raggedright{\textbf{#1} - {#2}}
+	\newline
+}
+
+% Definition of the environment
+\newenvironment{wishlist}
+{
+	\RecipeSection{Cooking Wishlist}
+	\begin{enumerate}
+}
+%Actual entries
+{
+\end{enumerate}
+}
+
+\endinput

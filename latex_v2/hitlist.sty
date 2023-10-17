@@ -1,0 +1,22 @@
+% RecipeHitList Design
+\ProvidesPackage{hitlist}
+
+
+% HitList Items
+\newcommand {\HitListItem}[1] {
+	\item \textbf{#1}
+	\newline
+}
+
+% Definition of the environment
+\newenvironment{hitlist}
+{
+	\RecipeSection{Cooking Hitlist}
+	\begin{enumerate}
+}
+%Actual entries
+{
+	\end{enumerate}
+}
+
+\endinput

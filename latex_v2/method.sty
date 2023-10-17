@@ -1,0 +1,53 @@
+% Method
+\ProvidesPackage{method}
+
+% IngredientTitle
+\newcommand {\MethodTitle}[0] {
+	\raggedright{\underline{\large{Method}}}
+}
+% PreparationTitle
+\newcommand {\PreparationTitle}[1] {
+	% Check if we are already enumerated
+	%	IF YES - then end the enumeration
+	%	Else do nothing
+	\item \textbf{PREPARATION:} #1
+	% Start enumeration
+}
+
+% IngredientPreparation
+\newcommand {\IngredientPreparation}[2] {
+	\item {\Ingredient{#1} : #2}
+}
+
+% Preparation (1 - Action)
+\newcommand {\PreparationStep}[1] {
+	\item {\emph{ -- #1 --}}
+}
+
+% CookingStep
+\newcommand {\CookingStep}[1] {
+	\item {\textbf{** #1 **}}
+}
+
+% CookingCondition ("Continue Unitl")
+\newcommand {\CookingCondition}[1] {
+	\item \textbf{CONTINUE UNTIL:} #1
+}
+
+
+% Definition of the environment
+\newenvironment{method}
+{
+% Title
+\MethodTitle
+% Cooking Instructions
+\begin{enumerate}
+}
+%Actual entries
+{
+%End cooking method by cleaning up the page
+\CookingStep{Serve!}
+\end{enumerate}
+}
+
+\endinput

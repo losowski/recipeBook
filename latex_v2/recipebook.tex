@@ -1,0 +1,70 @@
+% Specify a document class
+\documentclass{book}
+
+%Use the header style sheet
+\usepackage{recipebook}
+% Book Introductions
+\usepackage{preface}
+\usepackage{rulebook}
+\usepackage{wishlist}
+\usepackage{hitlist}
+%Actual cooking components
+\usepackage{ingredients}
+\usepackage{amounts}
+\usepackage{ingredient_list}
+\usepackage{method}
+\usepackage{appendices}
+% Start the document
+\begin{document}
+
+% Import preface
+\input{preface/preface}
+
+% Import rulebook
+\input{rulebook/rulebook}
+
+% Import wishlist
+\input{wishlist/wishlist}
+
+% Import hitlist
+\input{hitlist/hitlist}
+
+%Import ChickenChorizoKale
+%\input{ChickenChorizoKale/cooking.tex}
+%%Import PorkGoulash
+%\input{PorkGoulash/cooking.tex}
+%%Import SkilletHash
+%\input{SkilletHash/cooking.tex}
+%%Import GreekPotatoStew
+%\input{GreekPotatoStew/cooking.tex}
+%%Import GreekPotatoStew
+%\input{PolishSausageBake/cooking.tex}
+%%Import TagineChicken
+%\input{TagineChicken/cooking.tex}
+%%Import MoroccanCurriedChicken
+%\input{MoroccanCurriedChicken/cooking.tex}
+%%Import GarlicGreenBeans
+%\input{GarlicGreenBeans/cooking.tex}
+%%Import FiestyCabbage
+%\input{FiestyCabbage/cooking.tex}
+%%Import AllSpiceRagu
+%\input{AllSpiceRagu/cooking.tex}
+%%Import PaprikaChickenStew
+%\input{PaprikaChickenStew/cooking.tex}
+%%Import HeartyChickenStew
+%\input{HeartyChickenStew/cooking.tex}
+%%Import CottageChicken
+%\input{CottageChicken/cooking.tex}
+%%Import GingerSweetChickenCabbage
+%\input{GingerSweetChickenCabbage/cooking.tex}
+
+%Import Cardamom Tea
+%\input{CardamomTea/cooking.tex}
+
+% TODO: Add an index page "table of contents"
+% https://tex.stackexchange.com/questions/1605/making-a-table-of-contents-for-a-book
+% Needs work to properly implement the various sections
+\tableofcontents
+
+% End the document
+\end{document}

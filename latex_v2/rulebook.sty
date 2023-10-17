@@ -1,0 +1,20 @@
+% Rulebook Design
+\ProvidesPackage{rulebook}
+
+% WishList Items
+\newcommand {\RuleBookItem}[1] {
+	\item #1
+}
+
+% Definition of the environment
+\newenvironment{rulebook}
+{
+	\RecipeSection{Ingredient Rulebook}
+	\begin{enumerate}
+}
+%Actual entries
+{
+	\end{enumerate}
+}
+
+\endinput
