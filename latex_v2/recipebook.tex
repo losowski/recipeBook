@@ -14,8 +14,23 @@
 \usepackage{ingredient_list}
 \usepackage{method}
 \usepackage{appendices}
+
+\ifdefined\shoppinglist
+	\def\includefile{ingredients.tex}
+\else
+	\def\includefile{cooking.tex}
+\fi
+
+
 % Start the document
 \begin{document}
+
+
+
+% TODO: Add an index page "table of contents"
+% https://tex.stackexchange.com/questions/1605/making-a-table-of-contents-for-a-book
+% Needs work to properly implement the various sections
+\tableofcontents
 
 % Import preface
 \input{preface/preface}
@@ -29,42 +44,24 @@
 % Import hitlist
 \input{hitlist/hitlist}
 
-%Import ChickenChorizoKale
-%\input{ChickenChorizoKale/cooking.tex}
-%%Import PorkGoulash
-%\input{PorkGoulash/cooking.tex}
-%%Import SkilletHash
-%\input{SkilletHash/cooking.tex}
-%%Import GreekPotatoStew
-%\input{GreekPotatoStew/cooking.tex}
-%%Import GreekPotatoStew
-%\input{PolishSausageBake/cooking.tex}
-%%Import TagineChicken
-%\input{TagineChicken/cooking.tex}
-%%Import MoroccanCurriedChicken
-%\input{MoroccanCurriedChicken/cooking.tex}
-%%Import GarlicGreenBeans
-%\input{GarlicGreenBeans/cooking.tex}
-%%Import FiestyCabbage
-%\input{FiestyCabbage/cooking.tex}
-%%Import AllSpiceRagu
-%\input{AllSpiceRagu/cooking.tex}
-%%Import PaprikaChickenStew
-%\input{PaprikaChickenStew/cooking.tex}
-%%Import HeartyChickenStew
-%\input{HeartyChickenStew/cooking.tex}
-%%Import CottageChicken
-%\input{CottageChicken/cooking.tex}
-%%Import GingerSweetChickenCabbage
-%\input{GingerSweetChickenCabbage/cooking.tex}
 
+\RecipeSection{Breakfasts}{Breakfast dishes}
+% French Toast
+\input{breakfasts/FrenchToast/cooking.tex}
+
+% Omlette subsection
+\input{omlettes/recipebook.tex}
+
+% Mains subsection
+\input{mains/recipebook.tex}
+
+
+%\DrinksTitle
+\RecipeSection{Drinks}{Drink recipe}
 %Import Cardamom Tea
-%\input{CardamomTea/cooking.tex}
+\input{drinks/CardamomTea/cooking.tex}
 
-% TODO: Add an index page "table of contents"
-% https://tex.stackexchange.com/questions/1605/making-a-table-of-contents-for-a-book
-% Needs work to properly implement the various sections
-\tableofcontents
+
 
 % End the document
 \end{document}

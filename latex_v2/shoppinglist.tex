@@ -1,49 +1,46 @@
 % Specify a document class
-\documentclass{article}
+\documentclass{book}
 
+%Use the header style sheet
+\usepackage{recipebook}
+% Book Introductions
+\usepackage{preface}
+\usepackage{rulebook}
+\usepackage{wishlist}
+\usepackage{hitlist}
 %Actual cooking components
 \usepackage{ingredients}
 \usepackage{amounts}
 \usepackage{ingredient_list}
+\usepackage{method}
 \usepackage{appendices}
+
+
 % Start the document
 \begin{document}
 
-%import Demo
-\input{Demo/ingredients.tex}
+% TODO: Add an index page "table of contents"
+% https://tex.stackexchange.com/questions/1605/making-a-table-of-contents-for-a-book
+% Needs work to properly implement the various sections
+\tableofcontents
 
-%%Import ChickenChorizoKale
-%\input{ChickenChorizoKale/ingredients.tex}
-%%Import PorkGoulash
-%\input{PorkGoulash/ingredients.tex}
-%%Import SkilletHash
-%\input{SkilletHash/ingredients.tex}
-%%Import GreekPotatoStew
-%\input{GreekPotatoStew/ingredients.tex}
-%%Import GreekPotatoStew
-%\input{PolishSausageBake/ingredients.tex}
-%%Import TagineChicken
-%\input{TagineChicken/ingredients.tex}
-%%Import MoroccanCurriedChicken
-%\input{MoroccanCurriedChicken/ingredients.tex}
-%%Import GarlicGreenBeans
-%\input{GarlicGreenBeans/ingredients.tex}
-%%Import FiestyCabbage
-%\input{FiestyCabbage/ingredients.tex}
-%%Import AllSpiceRagu
-%\input{AllSpiceRagu/ingredients.tex}
-%%Import PaprikaChickenStew
-%\input{PaprikaChickenStew/ingredients.tex}
-%%Import HeartyChickenStew
-%\input{HeartyChickenStew/ingredients.tex}
-%%Import CottageChicken
-%\input{CottageChicken/ingredients.tex}
-%%Import GingerSweetChickenCabbage
-%\input{GingerSweetChickenCabbage/ingredients.tex}
-%
+\RecipeSection{Breakfasts}{Breakfast dishes}
+% French Toast
+\input{breakfasts/FrenchToast/ingredients.tex}
+
+% Omlette subsection
+\input{omlettes/shoppinglist.tex}
+
+% Mains subsection
+\input{mains/shoppinglist.tex}
+
+
 %\DrinksTitle
-%%Import Cardamom Tea
-%\input{CardamomTea/cooking.tex}
+\RecipeSection{Drinks}{Drink recipe}
+%Import Cardamom Tea
+\input{drinks/CardamomTea/cooking.tex}
+
+
 %
 % End the document
 \end{document}

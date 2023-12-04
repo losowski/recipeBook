@@ -3,17 +3,17 @@
 
 % Description
 \newcommand {\prefacePara}[1] {
-	\raggedright{#1}
-	\newline
+	\item #1
 }
 
 % Definition of the environment
-\newenvironment{preface}
+\newenvironment{preface}[1][0]
 {
-	\RecipeSection{Preface}
+	\begin{description}
 }
 %Actual entries
 {
+	\end{description}
 }
 
 \endinput
