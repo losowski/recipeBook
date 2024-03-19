@@ -1,0 +1,78 @@
+% Include shoppingList
+\input{mains/SubPrimeSteakSkillet/ingredients.tex}
+
+
+% Cooking Instructions
+\begin{method}
+\PreparationTitle{Meat Preparation}
+\IngredientPreparation{\DicedBeef}{Diced into 1.5cm cubes}
+
+
+
+% Stock
+\PreparationTitle{Prepare Stock}
+\AddIngredient{\BeefStock}
+\AddIngredient{\Salt}
+\AddIngredient{\PepperCorns}
+\AddIngredient{\Majoram}
+\AddIngredient{\FreshThyme}
+\AddIngredient{\Allspice}
+\AddIngredient{\MustardPowder}
+\AddIngredient{\SrirachaHotSauce}
+\AddIngredient{\TamarindPaste}
+\PreparationStep{Move to \PressureCooker number 1}
+
+% Pressure Cook meat
+\PreparationTitle{Pressure Cook meat}
+\AddIngredient{\DicedBeef}
+\CookingStep{High pressure setting on Pressure Cooker}
+\CookingCondition{40 mins has elapsed} % DO NOT OVERCOOK!
+
+
+% Vegetable preparation
+\PreparationTitle{Vegetable Preparation}
+\IngredientPreparation{\Onion}{Diced finely}
+\IngredientPreparation{\Garlic}{Peeled and chopped roughly}
+\IngredientPreparation{\Carrot}{chopped roughly}
+\IngredientPreparation{\BabyCupMushrooms}{chopped into halves}
+\IngredientPreparation{\NewPotatoes}{chopped into halves}
+
+
+% Pressure Cook Vegetables
+\PreparationTitle{Pressure Cook Vegtables}
+\AddIngredient{\NewPotatoes}
+\AddIngredient{\Carrot}
+\PreparationStep{Move to \PressureCooker number 2}
+\CookingStep{High pressure setting on Pressure Cooker}
+\CookingCondition{9 mins has elapsed}
+
+\PreparationTitle{Cook \Onion}
+\AddIngredient{\BabyCupMushrooms}
+\AddIngredient{\Onion}
+\AddIngredient{Stock from beef cooking}
+\CookingStep{Cover and cook in pot at medium-low heat}
+\CookingCondition{20-minutes elapsed, and meat is tender}
+
+
+% Brown meats
+\PreparationTitle{Brown \DicedBeef}
+\PreparationStep{Using skillet}
+\PreparationStep{\DicedBeef}
+\AddIngredient{\Garlic}
+\AddIngredient{\WorcesterSauce}
+\AddIngredient{\Salt}{applied generously to meat}
+\AddIngredient{\GroundBlackPepper}{applied generously to meat}
+\CookingStep{Fry at high heat}
+\CookingCondition{\DicedBeef is golden outside}
+
+
+\PreparationTitle{Combine Ingredients}
+\AddIngredient{\NewPotatoes}
+\AddIngredient{\Carrot}
+\AddIngredient{\BabyCupMushrooms}
+\AddIngredient{\Onion}
+\AddIngredient{\DicedBeef}
+\CookingStep{Stir in together}
+
+
+\end{method}

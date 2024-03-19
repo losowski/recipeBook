@@ -71,5 +71,42 @@ sed -i 's/{Star Anise}/{\\StarAnise}/g' */*/*.tex
 sed -i 's/{Mustard}/{\\MustardPowder}/g' */*/*.tex
 sed -i 's/{Mustard Powder}/{\\MustardPowder}/g' */*/*.tex
 sed -i 's/{Chipotle Hot Sauce}/{\\ChipotleHotSauce}/g' */*/*.tex
+sed -i 's/{Courgette}/{\\Courgette}/g' */*/*.tex
+sed -i 's/{Halloumi}/{\\HalloumiCheese}/g' */*/*.tex
+sed -i 's/{\\Halloumi}/{\\HalloumiCheese}/g' */*/*.tex
+sed -i 's/{Pumpkin Seeds}/{\\PumpkinSeeds}/g' */*/*.tex
+sed -i 's/{Pumpkin seeds}/{\\PumpkinSeeds}/g' */*/*.tex
+sed -i 's/{Vine Tomatoes}/{\\VineTomatoes}/g' */*/*.tex
+sed -i 's/{\\VineTomato}/{\\VineTomatoes}/g' */*/*.tex
+sed -i 's/{Chicken thighs}/{\\ChickenThighs}/g' */*/*.tex
+sed -i 's/{\\ChickenThighs}/{\\BonelessChickenThighs}/g' */*/*.tex
+sed -i 's/{Leeks}/{\\Leeks}/g' */*/*.tex
+sed -i 's/{\\Leeks}/{\\Leek}/g' */*/*.tex
+sed -i 's/{Celery}/{\\Celery}/g' */*/*.tex
+sed -i 's/{AllSpice}/{\\AllSpice}/g' */*/*.tex
+sed -i 's/{\\AllSpice}/{\\Allspice}/g' */*/*.tex
+sed -i 's/{Fennel Seeds}/{\\FennelSeeds}/g' */*/*.tex
+sed -i 's/{Sweetheart Cabbage}/{\\SweetheartCabbage}/g' */*/*.tex
+sed -i 's/{White onion}/{\\WhiteOnion}/g' */*/*.tex
+sed -i 's/{Garlic Granules}/{\\GarlicGranules}/g' */*/*.tex
+sed -i 's/{Pork Stock}/{\\PorkStock}/g' */*/*.tex
+sed -i 's/{Soft Cheese}/{\\SoftCheese}/g' */*/*.tex
+sed -i 's/{Orange pepper}/{\\OrangeBellPepper}/g' */*/*.tex
+sed -i 's/{Red pepper}/{\\RedBellPepper}/g' */*/*.tex
+sed -i 's/{Feta Cheese}/{\\FetaCheese}/g' */*/*.tex
+sed -i 's/{Ground Fenugreek}/{\\Fennugreek}/g' */*/*.tex
+sed -i 's/{Ground Cinnamon}/{\\GroundCinnamon}/g' */*/*.tex
+sed -i 's/{Fresh Ginger}/{\\FreshGinger}/g' */*/*.tex
+sed -i 's/{Dried oregano}/{\\Oregano}/g' */*/*.tex
+sed -i 's/{Pitted Olives}/{\\PittedOlives}/g' */*/*.tex
+sed -i 's/{Madras Curry Powder}/{\\MadrasCurryPowder}/g' */*/*.tex
+sed -i 's/{Chestnut mushrooms}/{\\ChestnutMushrooms}/g' */*/*.tex
+sed -i 's/{Sage}/{\\Sage}/g' */*/*.tex
+sed -i 's/{Jerk Seasoning}/{\\JerkSeasoning}/g' */*/*.tex
+# Morrocan Curried Chicken
 
+
+\add
+sed -i 's/{add}/{\\add}/g' */*/*.tex
+sed -i 's/{Add}/{\\add}/g' */*/*.tex
 # DONE

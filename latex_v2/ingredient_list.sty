@@ -4,28 +4,44 @@
 %  -- Ingredient.tex --
 % RecipeName
 \newcommand {\recipeName}[1] {
-	\def\vRecipeName{#1}
+	\clearpage
+	\section{#1}
 }
+
 % Serves Count
 \newcommand {\serveCount}[2] {
-	\def\vServeCount{#1}
-	\def\vTaste{#2}
+	\textbf{Serves:} #1 \hspace{1cm} \textbf{Taste: #2/10}
+	\newline
 }
 
 % CookTime
 \newcommand {\cookTime}[2] {
-	\def\vPreparationTime{#1}
-	\def\vCookingMinutes{#2}
+	\textbf{Preparation:} #1 minutes \hspace{1cm} \textbf{Cooking:} #2 minutes
+	\newline
 }
 
 % Description
 \newcommand {\recipeDesciption}[1] {
-	\def\vRecipeDesciption{#1}
+	#1
+	\newline
 }
 
 % Description
+%TODO: Fix this into an environment - should not repeat, but should be placed correctly
 \newcommand {\recipeNote}[1] {
-	\def\vRecipeNote{#1}
+	\item #1
+}
+
+% Definition of the environment
+\newenvironment{recipeNotes}
+{
+	\newline
+	\raggedright{\textbf{NOTES:}}
+	\begin{enumerate}
+}
+	%Actual entries
+{
+	\end{enumerate}
 }
 
 
@@ -46,29 +62,10 @@
 }
 
 
+
 % Definition of the environment
 \newenvironment{ingredient_list}
 {
-% RecipeName
-\clearpage
-\subsection{\vRecipeName}
-% Serves Count
-\textbf{Serves:} \vServeCount \hspace{1cm} \textbf{Taste: \vTaste/10}
-\newline
-% CookTime
-\textbf{Preparation:} \vPreparationTime -minutes \hspace{1cm} \textbf{Cooking:} \vCookingMinutes -minutes
-\newline
-\newline
-% Description
-\vRecipeDesciption
-\newline
-\newline
-% Recipe Note
-\ifdefined\vRecipeNote
-	\textbf{NOTE:} \vRecipeNote
-	\newline
-	\newline
-\fi
 % Ingredients title
 \IngredientTitle
 \begin{enumerate}

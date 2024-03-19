@@ -11,6 +11,13 @@
 	#1 $^{\circ}$C
 }
 
+% Container
+\newcommand{\Skillet}[0]{Skillet}
+\newcommand{\PressureCooker}[0]{Pressure Cooker}
+\newcommand{\FryingPan}[0]{Frying Pan}
+\newcommand{\LargePot}[0]{Large Pot}
+\newcommand{\Marinate}[0]{Marinate}
+\newcommand{\Plate}[0]{Marinate}
 
 
 % PreparationTitle
@@ -30,6 +37,14 @@
 % Preparation (1 - Action)
 \newcommand {\PreparationStep}[1] {
 	\item {\emph{ -- #1 --}}
+}
+
+\newcommand {\add}[0] {
+	add
+}
+
+\newcommand {\AddIngredient}[1] {
+	\PreparationStep{#1}{\add}
 }
 
 % CookingStep

@@ -24,16 +24,14 @@
 
 \title{RecipE-Book}
 \author{Eugene Losowski-Gallagher}
-\date{December 2023}
+\date{19 March 2024}
 
 % Start the document
 \begin{document}
 
 
 \maketitle
-% TODO: Add an index page "table of contents"
-% https://tex.stackexchange.com/questions/1605/making-a-table-of-contents-for-a-book
-% Needs work to properly implement the various sections
+%TODO: Format this so that chapters go 1-X not 0.1-0.X
 \tableofcontents
 
 % Import preface
@@ -48,23 +46,20 @@
 % Import hitlist
 \input{hitlist/hitlist}
 
-
-\RecipeSection{Breakfasts}{Breakfast dishes}
-% French Toast
-\input{breakfasts/FrenchToast/cooking.tex}
+% breakfasts
+\input{breakfasts/recipebook.tex}
 
 % Omlette subsection
 \input{omlettes/recipebook.tex}
 
+% Sides subsection
+\input{sides/recipebook.tex}
+
 % Mains subsection
 \input{mains/recipebook.tex}
 
-
-%\DrinksTitle
-\RecipeSection{Drinks}{Drink recipe}
-%Import Cardamom Tea
-\input{drinks/CardamomTea/cooking.tex}
-
+% Drinks subsection
+\input{drinks/recipebook.tex}
 
 
 % End the document

@@ -12,19 +12,27 @@
 	#1 tbsp
 }
 
-
-% Stock
-\newcommand{\stock}[2]
+% Liquid
+\newcommand{\ml}[1]
 {
-	#1 x #2 ml
+	#1 ml
 }
 
-% Liquid
-\newcommand{\sprinkle}[1]
+\newcommand{\sprinkle}[1][]
 {
 	#1 sprinkle
 }
 
+\newcommand{\shot}[1]
+{
+	#1 shot
+}
+
+% Stock
+\newcommand{\stock}[2]
+{
+	#1 x \ml{#2}
+}
 
 % Mass
 \newcommand{\grams}[1]
@@ -44,6 +52,10 @@
 	#1 x #2 g can
 }
 
+\newcommand{\teaCup}[1]
+{
+	#1 x 250ml cup
+}
 
 % Body
 \newcommand{\thumb}[1]
@@ -56,7 +68,6 @@
 	#1 handful
 }
 
-
 % Specific
 \newcommand{\cloves}[1]
 {
@@ -66,6 +77,11 @@
 \newcommand{\sprig}[1]
 {
 	#1 sprig
+}
+
+\newcommand{\stick}[1]
+{
+	#1 stick
 }
 
 \newcommand{\slices}[1]

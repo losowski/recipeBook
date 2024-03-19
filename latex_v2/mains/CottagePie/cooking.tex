@@ -1,0 +1,75 @@
+% Include shoppingList
+\input{mains/CottagePie/ingredients.tex}
+
+
+% Cooking Instructions
+\begin{method}
+
+% First round
+\PreparationTitle{Preparation of meats}
+\IngredientPreparation{\MincedBeef}{500g}
+\IngredientPreparation{\Onion}{Cut finely}
+\IngredientPreparation{\Garlic}{Crush}
+
+
+% Stock
+\PreparationTitle{Make Stock}
+\PreparationStep{\BeefStock}{\add}
+\PreparationStep{\Salt}{\add}
+\PreparationStep{\Pepper}{\add}
+\PreparationStep{\MustardPowder}{\add}
+\PreparationStep{\Thyme}{\add}
+\PreparationStep{\Rosemary}{\add}
+\PreparationStep{\Allspice}{\add}
+\PreparationStep{\Cumin}{\add}
+\PreparationStep{\WorcesterSauce}{\add}
+\PreparationStep{\Stout}{\add}
+
+
+% Meat Browning
+\PreparationTitle{Brown meats}
+\CookingStep{Using \Skillet / \FryingPan}
+\PreparationStep{Stock}{\add a little to reduce}
+\CookingStep{Cook at medium heat}
+\CookingCondition{All meat is browned}
+\CookingStep{Transfer to \LargePot}
+
+
+% Second round
+\PreparationTitle{Preparation of additional vegetables}
+\IngredientPreparation{\Carrot}{Cut finely}
+\IngredientPreparation{\Celery}{Cut finely}
+\IngredientPreparation{\ChestnutMushrooms}{Cut into thin strips, smaller is better}
+
+
+% Reduce
+\PreparationTitle{Pre-cook vegetables and reduce sauce}
+\CookingStep{Using \Skillet / \FryingPan}
+\PreparationStep{\Carrot}{\add}
+\PreparationStep{\Celery}{\add}
+\PreparationStep{Stock}{\add a little to reduce}
+\CookingStep{Cook at high heat}
+\CookingCondition{Reduce the content}
+
+
+% Prepare tray
+\PreparationTitle{Prepare tray}
+\PreparationStep{\ChestnutMushrooms}{\add}
+\PreparationStep{\Carrot}{\add}
+\PreparationStep{\TomatoPuree}{\add}
+\PreparationStep{\Celery}{\add}
+\PreparationStep{\SweetCorn}{\add}
+\PreparationStep{\Peas}{\add}
+
+% Stewing is essential to make sure the meat and flavours mature
+\PreparationTitle{Oven Tray first}
+\CookingStep{Cook at \Temperature{180} }
+\CookingCondition{30-minutes elapsed until vegetables cooked}
+
+
+\PreparationTitle{Oven Tray Second}
+\CookingStep{Cook at \Temperature{180} }
+\CookingCondition{30-minutes elapsed until vegetables cooked}
+
+
+\end{method}
